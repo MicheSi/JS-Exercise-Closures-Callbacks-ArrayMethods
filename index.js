@@ -88,7 +88,7 @@ function processLastItem(stringList, callback) {
  * should return 1000.
 */
 function processSum(numberList, callback) {
-  return callback (numberList.reduce(function(accum, num){
+  return callback(numberList.reduce(function(accum, num){
     return accum + num;
   }, 0));
 }
@@ -163,7 +163,7 @@ function processContains(item, list, callback) {
  * should return 3.
 */
 function processDuplicateFree(list, callback) {
-  return callback(...list);
+  return callback([...new Set(list)]);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
